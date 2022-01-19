@@ -34,8 +34,7 @@
           <a href="cleanX.dicom_processing.source.html" title="cleanX.dicom_processing.source module"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">cleanX 0.1.9 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >cleanX</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="cleanX.html" accesskey="U">cleanX package</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cleanX.html" accesskey="U">cleanX package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cleanX.image_work package</a></li> 
       </ul>
     </div>  
@@ -64,18 +63,18 @@
 <dt class="sig sig-object py" id="cleanX.image_work.create_pipeline">
 <span class="sig-prename descclassname"><span class="pre">cleanX.image_work.</span></span><span class="sig-name descname"><span class="pre">create_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_journal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.image_work.create_pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a pipeline that will execute the <code class="code docutils literal notranslate"><span class="pre">steps</span></code>.  If
-<code class="code docutils literal notranslate"><span class="pre">journal</span></code> is not falsy, create a journaling pipeline, that can
+<code class="code docutils literal notranslate"><span class="pre">journal</span></code> is not false, create a journaling pipeline, that can
 be pick up from the failed step.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>steps</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="cleanX.image_work.steps.html#cleanX.image_work.steps.Step" title="cleanX.image_work.steps.Step"><em>Step</em></a><em>]</em>) – A sequence of <code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code> to be executed in this pipeline.</p></li>
-<li><p><strong>batch_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Controls how many steps are processed concurrently.</p></li>
-<li><p><strong>journal</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>]</em>) – If <code class="code docutils literal notranslate"><span class="pre">True</span></code> is passed, the pipeline code will use a
+<li><p><strong>batch_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – Controls how many steps are processed concurrently.</p></li>
+<li><p><strong>journal</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – If <code class="code docutils literal notranslate"><span class="pre">True</span></code> is passed, the pipeline code will use a
 preconfigured directory to store the journal.  Otherwise,
 this must be the path to the directory to store the journal
 database.</p></li>
-<li><p><strong>keep_journal</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Controls whether the journal is kept after successful
+<li><p><strong>keep_journal</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Controls whether the journal is kept after successful
 completion of the pipeline.</p></li>
 </ul>
 </dd>
@@ -133,8 +132,9 @@ fast-forwarded to the last executed step + <code class="code docutils literal no
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">cleanX.image_work package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-cleanX.image_work">Module contents</a></li>
@@ -142,12 +142,17 @@ fast-forwarded to the last executed step + <code class="code docutils literal no
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="cleanX.dicom_processing.source.html"
-                        title="previous chapter">cleanX.dicom_processing.source module</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="cleanX.image_work.image_functions.html"
-                        title="next chapter">cleanX.image_work.image_functions module</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cleanX.dicom_processing.source.html"
+                          title="previous chapter">cleanX.dicom_processing.source module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cleanX.image_work.image_functions.html"
+                          title="next chapter">cleanX.image_work.image_functions module</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -185,14 +190,13 @@ fast-forwarded to the last executed step + <code class="code docutils literal no
           <a href="cleanX.dicom_processing.source.html" title="cleanX.dicom_processing.source module"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">cleanX 0.1.9 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >cleanX</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="cleanX.html" >cleanX package</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cleanX.html" >cleanX package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cleanX.image_work package</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, doctormakeda@gmail.com.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>

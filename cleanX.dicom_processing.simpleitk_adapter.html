@@ -34,9 +34,8 @@
           <a href="cleanX.dicom_processing.pydicom_adapter.html" title="cleanX.dicom_processing.pydicom_adapter module"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">cleanX 0.1.9 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >cleanX</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="cleanX.html" >cleanX package</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="cleanX.dicom_processing.html" accesskey="U">cleanX.dicom_processing package</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cleanX.html" >cleanX package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cleanX.dicom_processing.html" accesskey="U">cleanX.dicom_processing package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cleanX.dicom_processing.simpleitk_adapter module</a></li> 
       </ul>
     </div>  
@@ -50,8 +49,8 @@
 <span id="cleanx-dicom-processing-simpleitk-adapter-module"></span><h1>cleanX.dicom_processing.simpleitk_adapter module<a class="headerlink" href="#module-cleanX.dicom_processing.simpleitk_adapter" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.MetadataHelper">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cleanX.dicom_processing.simpleitk_adapter.</span></span><span class="sig-name descname"><span class="pre">MetadataHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.MetadataHelper" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cleanX.dicom_processing.simpleitk_adapter.</span></span><span class="sig-name descname"><span class="pre">MetadataHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.MetadataHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for getting DICOM metadata with SimpleITK.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.MetadataHelper.__init__">
@@ -72,13 +71,30 @@ extract metadata.</p>
 <dd><p>Reads enough of the DICOM file to fetch its metadata.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dicom_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The file for which to read the metadata.</p>
+<dd class="field-odd"><p><strong>dicom_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The file for which to read the metadata.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Parsed metadata.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.MetadataHelper.fetch_image">
+<span class="sig-name descname"><span class="pre">fetch_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dicom_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.MetadataHelper.fetch_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the pixel data of the DICOM image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dicom_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The file to extract image data from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pixel array of the extracted image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -87,8 +103,8 @@ extract metadata.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">cleanX.dicom_processing.simpleitk_adapter.</span></span><span class="sig-name descname"><span class="pre">SimpleITKDicomReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cleanX.dicom_processing.simpleitk_adapter.</span></span><span class="sig-name descname"><span class="pre">SimpleITKDicomReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for reading DICOM metadata with SimpleITK.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.__init__">
@@ -110,19 +126,19 @@ extract metadata.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.date_fields">
-<span class="sig-name descname"><span class="pre">date_fields</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'Content</span> <span class="pre">Date',</span> <span class="pre">'Series</span> <span class="pre">Date',</span> <span class="pre">'Study</span> <span class="pre">Date'}</span></em><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.date_fields" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">date_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'Content</span> <span class="pre">Date',</span> <span class="pre">'Series</span> <span class="pre">Date',</span> <span class="pre">'Study</span> <span class="pre">Date'}</span></em><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.date_fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default fields in the parsed DICOM file to be interpreted as date.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.time_fields">
-<span class="sig-name descname"><span class="pre">time_fields</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'Content</span> <span class="pre">Time',</span> <span class="pre">'Study</span> <span class="pre">Time'}</span></em><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.time_fields" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">time_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'Content</span> <span class="pre">Time',</span> <span class="pre">'Study</span> <span class="pre">Time'}</span></em><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.time_fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default fields in the parsed DICOM file to be interpreted as datetime.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.exclude_fields">
-<span class="sig-name descname"><span class="pre">exclude_fields</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.exclude_fields" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">exclude_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.exclude_fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default fields to exclude from dataframe generated form DICOM files.</p>
 </dd></dl>
 
@@ -130,16 +146,16 @@ extract metadata.</p>
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.dicom_date_to_date">
 <span class="sig-name descname"><span class="pre">dicom_date_to_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.dicom_date_to_date" title="Permalink to this definition">¶</a></dt>
 <dd><p>Utility method to parse DICOM dates to Python’s
-<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – DICOM date given as string.</p>
+<dd class="field-odd"><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – DICOM date given as string.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Pyton date object.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>.</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -148,7 +164,7 @@ extract metadata.</p>
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.dicom_time_to_time">
 <span class="sig-name descname"><span class="pre">dicom_time_to_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.dicom_time_to_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Utility method to help translate DICOM date and time objects to python
-<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This isn’t implemented yet.  Needs research on DICOM time
@@ -156,13 +172,30 @@ representation.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Date and time stored in DICOM as a string.</p>
+<dd class="field-odd"><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Date and time stored in DICOM as a string.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Python’s datetime object.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.rip_out_jpgs">
+<span class="sig-name descname"><span class="pre">rip_out_jpgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.rip_out_jpgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract image data from DICOM files and save it as JPG in
+<code class="code docutils literal notranslate"><span class="pre">destination</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Source</span></code>) – A source generator.  For extended explanation see
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Source</span></code>.</p></li>
+<li><p><strong>destination</strong> (Compatible with <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.join" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.path.join()</span></code></a>) – The name of the directory where JPG files
+should be stored.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -170,7 +203,7 @@ representation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.read">
 <span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.SimpleITKDicomReader.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read DICOM files, parse their metadata, and genrate a <code class="code docutils literal notranslate"><span class="pre">DataFrame</span></code>
+<dd><p>Read DICOM files, parse their metadata, generate a <code class="code docutils literal notranslate"><span class="pre">DataFrame</span></code>
 based on that metadata.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -181,7 +214,7 @@ based on that metadata.</p>
 <dd class="field-even"><p>dataframe with metadata from dicoms</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -192,23 +225,23 @@ based on that metadata.</p>
 <dt class="sig sig-object py" id="cleanX.dicom_processing.simpleitk_adapter.rip_out_jpgs_sitk">
 <span class="sig-prename descclassname"><span class="pre">cleanX.dicom_processing.simpleitk_adapter.</span></span><span class="sig-name descname"><span class="pre">rip_out_jpgs_sitk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dicomfile_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanX.dicom_processing.simpleitk_adapter.rip_out_jpgs_sitk" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function is for users with simpleITK library only.  If you do
-not have the library it will throw an error.  The funuction
+not have the library it will throw an error.  The function
 function jpeg files out of a dicom file directory, one by one,
 each of them (not just the first series as), and puts them in an
 out put directory. It also returns the images for inspection (as
-arrays), which you can look at the [0] layer with <a class="reference external" href="https://matplotlib.org/index.html#module-matplotlib" title="(in Matplotlib v3.4.3)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib</span></code></a></p>
+arrays), which you can look at the [0] layer with <a class="reference external" href="https://matplotlib.org/index.html#module-matplotlib" title="(in Matplotlib v3.5.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dicomfile_directory</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – dicomfile_directory, directory with dicom/.dcm</p></li>
-<li><p><strong>output_directory</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – output_directory, where they should be placed</p></li>
+<li><p><strong>dicomfile_directory</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – dicomfile_directory, directory with dicom/.dcm</p></li>
+<li><p><strong>output_directory</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – output_directory, where they should be placed</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of images represented as NumPy arrays.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)">numpy.ndarray</a>]</p>
+<dd class="field-odd"><p>List[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)">numpy.ndarray</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -222,12 +255,16 @@ arrays), which you can look at the [0] layer with <a class="reference external" 
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="cleanX.dicom_processing.pydicom_adapter.html"
-                        title="previous chapter">cleanX.dicom_processing.pydicom_adapter module</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="cleanX.dicom_processing.source.html"
-                        title="next chapter">cleanX.dicom_processing.source module</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cleanX.dicom_processing.pydicom_adapter.html"
+                          title="previous chapter">cleanX.dicom_processing.pydicom_adapter module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cleanX.dicom_processing.source.html"
+                          title="next chapter">cleanX.dicom_processing.source module</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -265,15 +302,14 @@ arrays), which you can look at the [0] layer with <a class="reference external" 
           <a href="cleanX.dicom_processing.pydicom_adapter.html" title="cleanX.dicom_processing.pydicom_adapter module"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">cleanX 0.1.9 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >cleanX</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="cleanX.html" >cleanX package</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="cleanX.dicom_processing.html" >cleanX.dicom_processing package</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="cleanX.html" >cleanX package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cleanX.dicom_processing.html" >cleanX.dicom_processing package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">cleanX.dicom_processing.simpleitk_adapter module</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, doctormakeda@gmail.com.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>
